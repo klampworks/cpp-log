@@ -2,7 +2,6 @@
 #define CPP_LOG
 
 #include <ostream>
-#include <iostream>
 
 struct logger {
 
@@ -31,7 +30,14 @@ struct logger {
 		ofs << s;
 		#endif
 
-		//ss[0] << s;
+		#ifdef CPP_LOG_COUT
+		std::cout << s;
+		#endif
+
+		#ifdef CPP_LOG_CERR
+		std::cerr << s;
+		#endif
+
 		return *this;
 	}
 };

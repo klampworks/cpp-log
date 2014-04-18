@@ -2,10 +2,10 @@
 #include <boost/test/included/unit_test.hpp>
 
 #define CPP_LOG_FILE "output"
+#define CPP_LOG_COUT 
+#define CPP_LOG_CERR 
 
 #include "cpp_log.hpp"
-#include <iostream>
-
 
 BOOST_AUTO_TEST_CASE(a)
 {
