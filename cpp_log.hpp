@@ -1,12 +1,13 @@
 #ifndef CPP_LOG2
 #define CPP_LOG2
 
-/* TODO symbol log is already defined in mathcalls.h. */
-namespace clog {
-
 #include <sstream>
 #include <iostream>
 #include <ctime>
+#include <string>
+
+/* TODO symbol log is already defined in mathcalls.h. */
+namespace clog {
 
 struct logger2 {
 
