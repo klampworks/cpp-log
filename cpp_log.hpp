@@ -5,9 +5,12 @@
 #include <iostream>
 #include <ctime>
 #include <string>
+#include <mutex>
 
 /* TODO symbol log is already defined in mathcalls.h. */
 namespace clog {
+
+std::mutex m;
 
 struct logger2 {
 
@@ -32,8 +35,10 @@ struct logger2 {
 
 	void flush(std::ostream &out)
 	{
+		m.lock();
 		out << level << ": " << now() << " " 
 			<< ss.str() << std::endl;
+		m.unlock();
 	}
 
 	virtual ~logger2()
