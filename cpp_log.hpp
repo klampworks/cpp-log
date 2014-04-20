@@ -32,7 +32,7 @@ struct logger2 {
 
 	void flush(std::ostream &out)
 	{
-		out << level << ": " << now() << " Prefix " 
+		out << level << ": " << now() << " " 
 			<< ss.str() << std::endl;
 	}
 

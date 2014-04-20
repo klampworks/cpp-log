@@ -14,7 +14,7 @@ Logging is configured at compile time through preprocessor directives.
 
 Output:
 
-	Error: 2014-04-19 10:03:48 Prefix hello 66 42
+	Error: 2014-04-19 10:03:48 hello 66 42
 
 Printed to standard out, standard error and appended to the file output.log.
 
